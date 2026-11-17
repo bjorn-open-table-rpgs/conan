@@ -1,0 +1,34 @@
+title: CONAN OPEN TABLE
+lang: pl
+
+# WAŻNE: wpisz nazwę swojego repo, np. "/conan-open-table".
+# Jeśli repo nazywa się TWOJLOGIN.github.io, zostaw puste: baseurl: ""
+baseurl: "/conan-open-table"
+
+# publikuj sesje nawet jeśli data jest "w przyszłości" (strefy czasowe)
+future: true
+
+collections:
+  kronika:
+    output: true
+    permalink: /kronika/:name.html
+
+defaults:
+  - scope: { path: "", type: "kronika" }
+    values: { layout: sesja }
+  - scope: { path: "", type: "pages" }
+    values: { layout: page }
+
+exclude:
+  - README.md
+  - szablony
+  - .obsidian
+  - .gitignore
+
+# Linki między podstronami zapisane w Obsidianie jako [tekst](plik.md)
+# zamieniają się na poprawne adresy strony (.html)
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true

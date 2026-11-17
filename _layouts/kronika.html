@@ -1,0 +1,9 @@
+---
+layout: page
+---
+{% assign sesje = site.kronika | sort: "date" | reverse %}
+<ul class="kronika">
+  {% for s in sesje %}
+  <li><a href="{{ s.url | relative_url }}">{{ s.title }}</a><time>{{ s.date | date: "%d.%m.%Y" }}</time></li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,7 @@
+# Menu u góry strony. Chcesz nową zakładkę? Dopisz linię i utwórz plik .md o tej nazwie.
+- { title: Strona główna, url: / }
+- { title: Postaci,       url: /postaci.html }
+- { title: Wiedza ogólna, url: /wiedza.html }
+- { title: Zasady,        url: /zasady.html }
+- { title: Kronika,       url: /kronika.html }
+- { title: Mapa,          url: /mapa.html }
