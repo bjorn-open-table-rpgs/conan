@@ -1,0 +1,34 @@
+---
+layout: default
+title: Strona główna
+---
+<h1>CONAN OPEN TABLE</h1>
+
+<p>Rusza drugi sezon kampanii w konwencji Conana, w formule <strong>OPEN TABLE</strong>: bez stałej drużyny, gracze dołączają wtedy, gdy mają czas.</p>
+
+<h2>Sezon 2: W cieniu Maga</h2>
+<p>Bohaterowie są więźniami tajemniczego Maga. Utrzymuje ich w ryzach za pomocą <em>Pożywki</em>, przeklętej zupy, którą muszą jeść, by przeżyć. Każda miska jest nagrodą za wykonane zadanie.</p>
+<p>Więźniowie zdobyli przepis na odtrutkę. Muszą zdecydować: być posłuszni Magowi czy uciekać. Obiecał im wolność i udział w swoim dziele, jeśli plan się powiedzie, ale mu nie ufają.</p>
+
+<h2>Zasady gry</h2>
+<ul>
+  <li>Jedna sesja to jedna wyprawa. Do końca gry drużyna musi bezpiecznie wrócić do obozu.</li>
+  <li>Jeśli nie zdąży wrócić przed końcem sesji, postacie uciekają, a w następnej sesji zaczynają z Wytrzymałością zmniejszoną o wynik rzutu k6.</li>
+  <li>System: <em>Barbarzyńcy i Czarownice</em>. Zasady tłumaczymy 10 minut przed grą, więc nie trzeba nic czytać.</li>
+  <li>Przed sesją potwierdź w <a href="{{ '/postaci/' | relative_url }}">liście postaci</a>, które postacie są gotowe.</li>
+</ul>
+
+{% assign sorted = site.sessions | sort: "date" | reverse %}
+{% if sorted.size > 0 %}
+{% assign latest = sorted.first %}
+<h2>Ostatni wpis w kronice</h2>
+<ul class="session-list">
+  <li>
+    <a href="{{ latest.url | relative_url }}">
+      <span class="meta">{% if latest.label %}{{ latest.label }}{% else %}Sesja {{ latest.session }} · {{ latest.date | date: "%d.%m.%Y" }}{% endif %}</span><br>
+      <strong>{{ latest.title }}</strong>
+      {% if latest.summary %}<p class="summary">{{ latest.summary }}</p>{% endif %}
+    </a>
+  </li>
+</ul>
+{% endif %}

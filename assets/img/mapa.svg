@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
-  <rect width="800" height="500" fill="#2d2a24"/>
-  <path d="M60 330 C160 250 240 380 340 300 S540 200 740 270" fill="none" stroke="#7fb7a2" stroke-width="4" stroke-dasharray="10 8"/>
-  <circle cx="340" cy="300" r="9" fill="#c0703f"/>
-  <text x="400" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#e7e0d1">Tu wstaw swoją mapę</text>
-  <text x="400" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#a59c89">zastąp plik assets/img/mapa.svg własnym obrazkiem</text>
-</svg>

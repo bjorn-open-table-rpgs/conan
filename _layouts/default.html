@@ -1,36 +1,27 @@
-<!doctype html>
-<html lang="{{ site.lang }}">
+<!DOCTYPE html>
+<html lang="pl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-  <title>{% if page.title and page.url != "/" %}{{ page.title }} – {% endif %}{{ site.title }}</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&display=swap">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 <body>
-  <header class="top">
-    <div class="top-inner">
-      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      <nav aria-label="Menu główne">
-        {% for item in site.data.menu %}
-          {% assign slug = item.url | remove: '.html' %}
-          {% assign active = false %}
-          {% if item.url == '/' %}
-            {% if page.url == '/' %}{% assign active = true %}{% endif %}
-          {% elsif page.url contains slug %}
-            {% assign active = true %}
-          {% endif %}
-          <a href="{{ item.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{{ item.title }}</a>
-        {% endfor %}
-      </nav>
-    </div>
+  <header class="site-header">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav>
+      <a href="{{ '/' | relative_url }}">Strona główna</a>
+      <a href="{{ '/postaci/' | relative_url }}">Postaci</a>
+      <a href="{{ '/wiedza-ogolna/' | relative_url }}">Wiedza ogólna</a>
+      <a href="{{ '/zasady/' | relative_url }}">Zasady</a>
+      <a href="{{ '/kronika/' | relative_url }}">Kronika</a>
+      <a href="{{ '/mapa/' | relative_url }}">Mapa</a>
+    </nav>
   </header>
   <main>
     {{ content }}
   </main>
-  <script src="{{ '/assets/zoom.js' | relative_url }}"></script>
+  <footer class="site-footer">{{ site.title }}</footer>
 </body>
 </html>

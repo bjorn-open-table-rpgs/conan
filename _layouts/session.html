@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<article class="report">
+  <p class="meta">{% if page.label %}{{ page.label }}{% else %}Sesja {{ page.session }} · {{ page.date | date: "%d.%m.%Y" }}{% endif %}</p>
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+</article>
+<p class="pager"><a href="{{ '/kronika/' | relative_url }}">← Cała kronika</a></p>

@@ -1,0 +1,18 @@
+---
+layout: default
+title: Kronika
+permalink: /kronika/
+---
+<h1>Kronika</h1>
+<ul class="session-list">
+{% assign sorted = site.sessions | sort: "date" | reverse %}
+{% for s in sorted %}
+  <li>
+    <a href="{{ s.url | relative_url }}">
+      <span class="meta">{% if s.label %}{{ s.label }}{% else %}Sesja {{ s.session }} · {{ s.date | date: "%d.%m.%Y" }}{% endif %}</span><br>
+      <strong>{{ s.title }}</strong>
+      {% if s.summary %}<p class="summary">{{ s.summary }}</p>{% endif %}
+    </a>
+  </li>
+{% endfor %}
+</ul>
