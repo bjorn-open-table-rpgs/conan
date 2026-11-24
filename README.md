@@ -26,6 +26,7 @@ Wpis z datą z przyszłości pojawi się dopiero w tym dniu.
 Wgraj do folderu `assets/` i wstaw: `![opis]({{ '/assets/obraz.jpg' | relative_url }})`.
 
 ## Publikacja (jednorazowo)
-1. Utwórz organizację na GitHubie, a w niej publiczne repozytorium o nazwie `NAZWA-ORGANIZACJI.github.io` i wgraj pliki.
+1. W organizacji `bjorn-open-table-rpgs` utwórz publiczne repozytorium o nazwie `conan` i wgraj do niego pliki.
 2. Settings → Pages → Source: **Deploy from a branch**, gałąź `main`, folder `/ (root)`.
-3. W `_config.yml` ustaw `url` na `https://NAZWA-ORGANIZACJI.github.io`.
+3. Strona działa pod adresem https://bjorn-open-table-rpgs.github.io/conan/ (w `_config.yml`: `baseurl: "/conan"`).
+4. Strona startowa z listą kampanii jest w osobnym repozytorium `bjorn-open-table-rpgs.github.io`.

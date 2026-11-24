@@ -3,10 +3,10 @@ title: "CONAN OPEN TABLE"
 description: "Kronika, postacie i materiały do kampanii Conan Open Table"
 lang: pl
 
-# Strona organizacji: repozytorium o nazwie NAZWA-ORGANIZACJI.github.io
-# -> adres https://NAZWA-ORGANIZACJI.github.io , wtedy baseurl zostaje puste.
-baseurl: ""
-url: "https://NAZWA-ORGANIZACJI.github.io"
+# Ta strona to repozytorium "conan" w organizacji bjorn-open-table-rpgs,
+# publikowane pod adresem https://bjorn-open-table-rpgs.github.io/conan/
+baseurl: "/conan"
+url: "https://bjorn-open-table-rpgs.github.io"
 
 collections:
   sessions:

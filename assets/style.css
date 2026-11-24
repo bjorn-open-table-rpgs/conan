@@ -47,3 +47,5 @@ td, th { border: 1px solid var(--line); padding: .35rem .6rem; }
 .card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
 .card h3 { margin: .5rem 0 .2rem; font-size: 1.05rem; }
 .card p { margin: 0; font-size: .8rem; color: var(--muted); line-height: 1.4; }
+
+nav a.back { color: var(--muted); font-size: .85rem; }
