@@ -41,13 +41,19 @@
   </main>
   <footer class="site-footer">{{ site.title }}</footer>
   <script>
-    // 1) Statusy w tabelach (WYKONANE, ZDOBYTE, ???) dostają znacznik do ostylowania.
+    // 1) Statusy w tabelach (WYKONANE, ZDOBYTE, ???) dostają znacznik do ostylowania; tabele dostają opakowanie z przewijaniem.
     // 2) Obraz w treści (np. mapa) otwiera się po dotknięciu w pełnym rozmiarze, gdzie można go powiększyć palcami.
     (function () {
       document.querySelectorAll('main td').forEach(function (td) {
         var t = td.textContent.trim().toUpperCase();
         if (t === 'WYKONANE' || t === 'ZDOBYTE' || t === 'ZDOBYTY' || t === 'GOTOWE') td.classList.add('done');
         else if (t === '???') td.classList.add('unknown');
+      });
+      document.querySelectorAll('main table').forEach(function (table) {
+        var wrap = document.createElement('div');
+        wrap.className = 'table-wrap';
+        table.parentNode.insertBefore(wrap, table);
+        wrap.appendChild(table);
       });
       document.querySelectorAll('main img').forEach(function (img) {
         if (img.closest('a') || img.closest('.cards') || img.closest('.session-list')) return;

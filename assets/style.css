@@ -163,6 +163,9 @@ a.zoom > img {
 a.zoom { display: block; }
 
 /* Tabele: czytelne na telefonie, zawijają tekst zamiast rozpychać stronę */
+/* Opakowanie dodawane skryptem: szeroka tabela przewija się w bok zamiast rozpychać stronę */
+.table-wrap { margin: 1.6rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-wrap table { margin: 0; }
 table {
   width: 100%;
   margin: 1.6rem 0;
@@ -190,7 +193,7 @@ th {
 }
 tr:last-child td { border-bottom: 0; }
 /* Kolumna ze statusem (WYKONANE, ZDOBYTE, ???): znaczniki dodaje mały skrypt w układzie strony */
-td:last-child { white-space: nowrap; width: 1%; }
+td.done, td.unknown { white-space: nowrap; }       /* tylko krótkie statusy, nie długie opisy */
 td.done {
   color: var(--done);
   font-family: var(--display);
