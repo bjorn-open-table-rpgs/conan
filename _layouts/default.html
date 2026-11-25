@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:image" content="{{ '/assets/baner-kronika.jpg' | absolute_url }}">
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 <body>
@@ -20,6 +24,15 @@
       <a href="{{ '/mapa/' | relative_url }}">Mapa</a>
     </nav>
   </header>
+  {% if page.hero %}
+  <div class="hero">
+    <img src="{{ '/assets/baner-kronika-900.jpg' | relative_url }}"
+         srcset="{{ '/assets/baner-kronika-900.jpg' | relative_url }} 900w, {{ '/assets/baner-kronika.jpg' | relative_url }} 1584w"
+         sizes="(max-width: 600px) 135vw, 100vw"
+         width="1584" height="672"
+         alt="Wyżyna Wapiennych Kości, Kroniki kampanii, Cień Maga: czarodziej w szacie na skalnej półce wznosi dłoń ku drużynie wojowników po drugiej stronie przepaści pełnej kości i amonitów">
+  </div>
+  {% endif %}
   <main>
     {{ content }}
   </main>

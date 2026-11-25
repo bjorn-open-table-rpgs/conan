@@ -1,51 +1,179 @@
+/* Conan Open Table: styl w klimacie Savage Sword of Conan.
+   Czerń tuszu, kremowy papier, pulpowa czerwień. Kolory zmienisz w zmiennych poniżej. */
 :root {
-  --bg: #17120e;
-  --panel: #231b14;
-  --text: #eadfce;
-  --muted: #a89a86;
-  --accent: #d9822b;
-  --line: #3a2e22;
+  color-scheme: dark;
+  --bg: #0e0e0e;
+  --panel: #171717;
+  --paper: #ece6d4;        /* kremowy papier z baneru */
+  --text: #e6e0cf;
+  --muted: #9b9684;
+  --line: #2c2b27;
+  --accent: #e0553d;       /* czerwień do linków i wyróżnień (czytelna na czerni) */
+  --accent-dark: #7a2a1c;  /* ciemna czerwień do cieni i ozdób */
+  --display: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Black", sans-serif;
+  --body: Georgia, "Times New Roman", serif;
 }
+
 * { box-sizing: border-box; }
-html { font-size: 18px; }
+
+html { font-size: 18px; -webkit-text-size-adjust: 100%; }
+
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.65;
+  font-family: var(--body);
+  line-height: 1.7;
 }
-a { color: var(--accent); }
+
+a { color: var(--accent); text-underline-offset: .15em; }
+a:hover { color: var(--paper); }
+
+/* Nagłówek z menu */
 .site-header {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
-  gap: .5rem 1.5rem; padding: .9rem 1.1rem;
-  background: var(--panel); border-bottom: 2px solid var(--accent);
+  gap: .3rem 1.5rem;
+  padding: .7rem 1.1rem;
+  background: #000;
+  border-bottom: 3px solid var(--paper);
 }
-.brand { font-weight: bold; font-size: 1.15rem; color: var(--text); text-decoration: none; letter-spacing: .03em; }
-nav a { margin-right: 1.1rem; text-decoration: none; padding: .4rem 0; display: inline-block; }
-main { max-width: 42rem; margin: 0 auto; padding: 1.2rem 1.1rem 3rem; }
-h1, h2, h3 { line-height: 1.25; }
-h1 { font-size: 1.8rem; margin-top: .3rem; }
-.meta { color: var(--muted); font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 0; }
-.session-list { list-style: none; padding: 0; }
-.session-list li { border: 1px solid var(--line); background: var(--panel); border-radius: 6px; margin-bottom: .8rem; }
-.session-list a { display: block; padding: .8rem 1rem; text-decoration: none; color: var(--text); }
-.session-list a:hover { background: #2c2218; }
-.session-list .meta { font-size: .75rem; }
-.session-list .summary { color: var(--muted); font-size: .9rem; margin: .2rem 0 0; }
-.pager { margin-top: 2rem; }
-img { max-width: 100%; height: auto; border-radius: 4px; }
-blockquote { margin-left: 0; padding-left: 1rem; border-left: 3px solid var(--accent); color: var(--muted); }
+.brand {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--paper);
+  text-decoration: none;
+}
+nav { display: flex; flex-wrap: wrap; gap: 0 1rem; }
+nav a {
+  display: inline-block;
+  padding: .55rem 0;            /* wygodny cel dotyku */
+  font-family: var(--display);
+  font-size: .9rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--paper);
+}
+nav a:hover { color: var(--accent); }
+nav a.back { color: var(--muted); }
+
+/* Baner */
+.hero {
+  background: #000;
+  border-bottom: 3px solid var(--paper);
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 1100px;            /* nie powiększamy ponad sensowny rozmiar */
+  margin: 0 auto;
+}
+/* Na telefonie kadrujemy baner tak, żeby tytuł i bohaterowie były większe */
+@media (max-width: 600px) {
+  .hero img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: 40% 35%;
+  }
+}
+
+main { max-width: 42rem; margin: 0 auto; padding: 1.4rem 1.1rem 3rem; }
+
+/* Nagłówki */
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  line-height: 1.2;
+  color: var(--paper);
+}
+h1 { font-size: 2rem; margin: .4rem 0 1rem; }
+h2 {
+  font-size: 1.35rem;
+  margin: 2rem 0 .6rem;
+  padding-bottom: .25rem;
+  border-bottom: 2px solid var(--accent-dark);
+}
+h3 { font-size: 1.1rem; }
+
+.meta {
+  margin: 0;
+  font-family: var(--display);
+  font-size: .85rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Lista sesji: panele jak w komiksie */
+.session-list { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: 1rem; }
+.session-list li {
+  background: var(--panel);
+  border: 2px solid var(--paper);
+  box-shadow: 4px 4px 0 var(--accent-dark);
+}
+.session-list a {
+  display: block;
+  padding: .9rem 1.1rem;
+  min-height: 3.5rem;
+  color: var(--text);
+  text-decoration: none;
+}
+.session-list a:hover { background: #211513; color: var(--text); }
+.session-list strong {
+  font-family: var(--display);
+  font-weight: normal;
+  font-size: 1.2rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: var(--paper);
+}
+.session-list .meta { font-size: .78rem; }
+.session-list .summary { margin: .2rem 0 0; color: var(--muted); font-size: .92rem; line-height: 1.5; }
+
+.pager { margin-top: 2.2rem; }
+
+/* Treść raportów */
+img { max-width: 100%; height: auto; }
+blockquote {
+  margin: 1.2rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid var(--accent);
+  color: var(--muted);
+  font-style: italic;
+}
 table { border-collapse: collapse; display: block; overflow-x: auto; }
 td, th { border: 1px solid var(--line); padding: .35rem .6rem; }
-.site-footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 1.5rem; border-top: 1px solid var(--line); }
 
 /* Karty postaci */
-.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem .8rem; margin-top: 1rem; }
 @media (min-width: 40rem) { .cards { grid-template-columns: repeat(3, 1fr); } }
-.card { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: .6rem; }
-.card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
+.card {
+  background: var(--panel);
+  border: 2px solid var(--paper);
+  box-shadow: 4px 4px 0 var(--accent-dark);
+  padding: .5rem;
+}
+.card img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
 .card h3 { margin: .5rem 0 .2rem; font-size: 1.05rem; }
 .card p { margin: 0; font-size: .8rem; color: var(--muted); line-height: 1.4; }
 
-nav a.back { color: var(--muted); font-size: .85rem; }
+.site-footer {
+  text-align: center;
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: .8rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 1.5rem;
+  border-top: 3px solid var(--paper);
+}
+
+@media (min-width: 40rem) {
+  html { font-size: 19px; }
+  h1 { font-size: 2.4rem; }
+}
