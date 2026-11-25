@@ -81,6 +81,8 @@ Wgraj obraz do folderu `assets` (**Add file → Upload files**), a w raporcie ws
 ![krótki opis]({{ '/assets/nazwa-obrazu.jpg' | relative_url }})
 ```
 
+W Obsidianie wystarczy wkleić obraz do notatki (Ctrl+V). Trafi do `assets`, a link wstawi się sam.
+
 Zmniejsz zdjęcia przed wgraniem (najlepiej do ok. 1000 px szerokości), bo duże spowalniają stronę na telefonie.
 
 ## Najczęstsze problemy

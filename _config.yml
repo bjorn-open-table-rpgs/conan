@@ -11,7 +11,7 @@ url: "https://bjorn-open-table-rpgs.github.io"
 collections:
   sessions:
     output: true
-    permalink: /kronika/:name/
+    permalink: /kronika/:name.html
 
 defaults:
   - scope:
