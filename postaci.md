@@ -10,7 +10,7 @@ permalink: /postaci/
 <div class="cards">
   <div class="card"><img src="{{ '/assets/portrety/valerius.jpg' | relative_url }}" alt="Valerius" loading="lazy"><h3>Valerius (Cinek)</h3><p>Aquiloński sędzia zdegradowany do strażnika w slumsach, potem zwerbowany do świty Maga.</p></div>
   <div class="card"><img src="{{ '/assets/portrety/nefren.jpg' | relative_url }}" alt="Nefren" loading="lazy"><h3>Nefren (Matys)</h3><p>Zbiegły niewolnik i czarownik, pozostawiony na śmierć na pustyni i odnaleziony przez Maga.</p></div>
-  <div class="card"><img src="{{ '/assets/portrety/gorm.jpg' | relative_url }}" alt="Gorm" loading="lazy"><h3>Gorm</h3><p>Pikt schwytany po zabłąkaniu się w dżungli przy boskim posągu.</p></div>
+  <div class="card"><img src="{{ '/assets/portrety/gorm.jpg' | relative_url }}" alt="Gorm" loading="lazy"><h3>Gorm (Czarny)</h3><p>Pikt schwytany po zabłąkaniu się w dżungli przy boskim posągu.</p></div>
   <div class="card"><img src="{{ '/assets/portrety/sven.jpg' | relative_url }}" alt="Sven" loading="lazy"><h3>Sven (Kurzy)</h3><p>Wanirski skald i awanturnik, zniewolony przez Maga po przyjęciu zlecenia.</p></div>
   <div class="card"><img src="{{ '/assets/portrety/caelan.jpg' | relative_url }}" alt="Caelan" loading="lazy"><h3>Caelan (Zii)</h3><p>Cymryjski wojownik, który stracił dłoń; Mag dał mu stalową protezę, a on został jego sługą.</p></div>
   <div class="card"><img src="{{ '/assets/portrety/publius.jpg' | relative_url }}" alt="Publius" loading="lazy"><h3>Publius (Misiek)</h3><p>Aquiloński mnich i urzędnik, zwabiony do biblioteki Maga i zniewolony.</p></div>
