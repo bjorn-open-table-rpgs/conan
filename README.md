@@ -51,6 +51,23 @@ Gracz (Postać), Gracz (Postać), Gracz (Postać).
 Pod drugą linią `---` piszesz treść. Każdy punkt zaczyna się od `- ` (myślnik i spacja).
 Pogrubienie: `**tekst**`. Nowa sekcja: `## Nazwa`. Cytat: linia zaczynająca się od `> `.
 
+## Pisanie w Obsidianie (wygodniej na komputerze)
+
+Ten folder jest gotowy do otwarcia jako vault w Obsidianie. Ustawienia są w `.obsidian`.
+
+**Jednorazowo**
+1. Obsidian → **Open folder as vault** → wskaż ten folder.
+2. Settings → Community plugins → włącz wtyczki → zainstaluj **Obsidian Git** i włącz ją. Potrzebny jest zainstalowany Git.
+3. Settings → Hotkeys: przypisz skróty do poleceń *Obsidian Git: Commit-and-sync* oraz *Templates: Insert template*. Obsidian ostrzeże o konflikcie, jeśli skrót jest zajęty (np. Ctrl+T otwiera nową kartę).
+4. Przy pierwszym pushu zaloguj się do GitHuba, jeśli Git o to poprosi.
+5. W ustawieniach Obsidian Git zostaw wyłączone automatyczne commity: repozytorium jest publiczne, a niedokończone raporty nie powinny wychodzić na stronę.
+
+**Nowy raport**
+1. Nowa notatka (trafia do `_sessions`), nazwa np. `2026-11-06-sezon-2-sesja-4`.
+2. Skrót *Insert template*: wstawia nagłówek z dzisiejszą datą. Zmień `N`, tytuł i zajawkę.
+3. Napisz raport.
+4. Skrót *Commit-and-sync*: commit i push. Po około minucie raport jest na stronie.
+
 ## Edycja i usuwanie raportu
 
 - **Poprawka:** otwórz plik w `_sessions`, kliknij ikonę ołówka, zmień tekst, **Commit changes**.

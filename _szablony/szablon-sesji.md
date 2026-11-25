@@ -1,8 +1,8 @@
 ---
 title: "Tytuł sesji"
-label: "Sezon 2 · Sesja 4 · 06.11.2026"
-session: 4
-date: 2026-11-06
+label: "Sezon 2 · Sesja N · {{date:DD.MM.YYYY}}"
+session: N
+date: {{date:YYYY-MM-DD}}
 summary: "Jedno zdanie zajawki widoczne na liście i na stronie głównej."
 ---
 - Pierwszy punkt.
