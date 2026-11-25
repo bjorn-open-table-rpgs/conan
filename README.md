@@ -1,32 +1,80 @@
 # Conan Open Table: strona kampanii
 
-## Dodawanie wpisu do kroniki (telefon lub komputer, bez instalowania czegokolwiek)
+Strona działa pod adresem https://bjorn-open-table-rpgs.github.io/conan/
 
-1. Otwórz repozytorium na github.com i wejdź do folderu `_sessions`.
-2. Kliknij **Add file → Create new file**.
-3. Nazwij plik np. `2026-02-07-sesja-4.md`.
-4. Na początku wklej poniższy nagłówek, a pod nim napisz relację zwykłym tekstem lub w Markdownie:
+## Jak dodać raport z sesji
 
-   ```
-   ---
-   title: "Tytuł sesji"
-   session: 4
-   date: 2026-02-07
-   summary: "Jedno zdanie zajawki widoczne na liście."
-   ---
-   ```
-5. Kliknij **Commit changes**. Po około minucie wpis jest na stronie, na górze listy.
+Każdy raport to **jeden plik tekstowy** w folderze `_sessions`. Plik `.md` (Markdown) to zwykły tekst z kilkoma prostymi znaczkami. Po zapisaniu strona sama się przebudowuje i raport pojawia się na liście.
 
-Wpis z datą z przyszłości pojawi się dopiero w tym dniu.
+Da się to zrobić w przeglądarce, także na telefonie. Nie trzeba instalować niczego.
 
-## Edycja pozostałych stron
-`index.html`, `postaci.md`, `zasady.md`, `wiedza-ogolna.md`, `mapa.md` edytujesz tak samo (ikona ołówka).
+1. Wejdź na https://github.com/bjorn-open-table-rpgs/conan i otwórz folder `_sessions`.
+2. Najłatwiej: otwórz ostatni raport, kliknij ikonę **Copy raw file**, potem wróć do folderu `_sessions`.
+   Albo skopiuj szablon z `_szablony/szablon-sesji.md` (patrz niżej).
+3. Kliknij **Add file → Create new file**.
+4. Nazwa pliku: `RRRR-MM-DD-sezon-2-sesja-N.md`, np. `2026-11-06-sezon-2-sesja-4.md`.
+5. Wklej szablon i uzupełnij go (opis poniżej).
+6. Kliknij **Commit changes…**, zostaw zaznaczone *Commit directly to the main branch* i zatwierdź.
+7. Po ok. minucie raport jest na stronie, na górze listy.
+
+## Szablon raportu
+
+Skopiuj w całości. Wartości po dwukropku zmień, linie `---` zostaw.
+
+```
+---
+title: "Tytuł sesji"
+label: "Sezon 2 · Sesja 4 · 06.11.2026"
+session: 4
+date: 2026-11-06
+summary: "Jedno zdanie zajawki widoczne na liście i na stronie głównej."
+---
+- Pierwszy punkt.
+- Drugi punkt.
+- Trzeci punkt.
+
+## Uczestnicy
+
+Gracz (Postać), Gracz (Postać), Gracz (Postać).
+```
+
+### Co oznaczają pola
+
+| Pole | Co wpisać |
+|------|-----------|
+| `title` | Tytuł raportu, zawsze w cudzysłowie. |
+| `label` | Napis nad tytułem, np. `Sezon 2 · Sesja 4 · 06.11.2026`. Zmieniasz numer i datę. |
+| `session` | Sam numer sesji. |
+| `date` | Data sesji: `RRRR-MM-DD`. Według niej raporty układają się na liście (najnowszy na górze). |
+| `summary` | Jedno zdanie zajawki. |
+
+Pod drugą linią `---` piszesz treść. Każdy punkt zaczyna się od `- ` (myślnik i spacja).
+Pogrubienie: `**tekst**`. Nowa sekcja: `## Nazwa`. Cytat: linia zaczynająca się od `> `.
+
+## Edycja i usuwanie raportu
+
+- **Poprawka:** otwórz plik w `_sessions`, kliknij ikonę ołówka, zmień tekst, **Commit changes**.
+- **Usunięcie:** otwórz plik, menu `…` w prawym górnym rogu, **Delete file**, zatwierdź.
 
 ## Obrazy
-Wgraj do folderu `assets/` i wstaw: `![opis]({{ '/assets/obraz.jpg' | relative_url }})`.
 
-## Publikacja (jednorazowo)
-1. W organizacji `bjorn-open-table-rpgs` utwórz publiczne repozytorium o nazwie `conan` i wgraj do niego pliki.
-2. Settings → Pages → Source: **Deploy from a branch**, gałąź `main`, folder `/ (root)`.
-3. Strona działa pod adresem https://bjorn-open-table-rpgs.github.io/conan/ (w `_config.yml`: `baseurl: "/conan"`).
-4. Strona startowa z listą kampanii jest w osobnym repozytorium `bjorn-open-table-rpgs.github.io`.
+Wgraj obraz do folderu `assets` (**Add file → Upload files**), a w raporcie wstaw:
+
+```
+![krótki opis]({{ '/assets/nazwa-obrazu.jpg' | relative_url }})
+```
+
+Zmniejsz zdjęcia przed wgraniem (najlepiej do ok. 1000 px szerokości), bo duże spowalniają stronę na telefonie.
+
+## Najczęstsze problemy
+
+- **Raport się nie pojawił.** Poczekaj 2–3 minuty. Potem sprawdź zakładkę **Actions** w repozytorium. Czerwony krzyżyk oznacza błąd, a kliknięcie pokaże jego treść.
+- **Cały raport widać jako goły tekst z `---`.** Brakuje linii `---` na początku albo na końcu nagłówka.
+- **Tytuł z dwukropkiem psuje stronę.** Tytuł musi być w cudzysłowie: `title: "Coś: coś"`.
+- **Raport jest, ale nie na górze listy.** Sprawdź `date`. Lista układa się po dacie, nie po numerze sesji.
+- **Raport z datą z przyszłości nie pokazuje się,** dopóki ta data nie nadejdzie.
+- **Nazwa pliku musi być unikalna,** inaczej GitHub nie pozwoli zapisać.
+
+## Inne strony
+
+`postaci.md`, `zasady.md`, `wiedza-ogolna.md`, `mapa.md` i `index.html` edytujesz tak samo, ikoną ołówka. Zostaw nagłówek między `---` na początku pliku.
