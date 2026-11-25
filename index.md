@@ -5,20 +5,21 @@ hero: true
 ---
 # CONAN OPEN TABLE
 
-Rusza drugi sezon kampanii w konwencji Conana, w formule **OPEN TABLE**: bez stałej drużyny, gracze dołączają wtedy, gdy mają czas.
+⚔️ Odpalamy drugi sezon kampanii w świecie Conana w systemie OPEN TABLE – nie ma stałego składu, grasz wtedy, kiedy masz czas!
 
 ## Sezon 2: W cieniu Maga
 
-Bohaterowie są więźniami tajemniczego Maga. Utrzymuje ich w ryzach za pomocą *Pożywki*, przeklętej zupy, którą muszą jeść, by przeżyć. Każda miska jest nagrodą za wykonane zadanie.
+Wcielacie się w **jeńców tajemniczego Maga,** który trzyma was na smyczy *Pożywki* - przeklętej zupy, którą musicie jeść, by przeżyć. Kolejna miska *Pożywki* czeka na was, **pod warunkiem wypełnienia kolejnego zadania dla Maga**. Nie ufacie mu, ale obiecał wam, że **gdy jego plan się ziści, zwolni was ze służby i da wam udział w jego dziele**.
 
-Więźniowie zdobyli przepis na odtrutkę. Muszą zdecydować: być posłuszni Magowi czy uciekać. Obiecał im wolność i udział w swoim dziele, jeśli plan się powiedzie, ale mu nie ufają.
+Na szczęście, udało wam się zdobyć *receptę na antidotum przeciw Pożywce*. 
 
-## Zasady gry
+**To wy zdecydujecie**, czy posłusznie poddacie się woli Maga, czy potajemnie zerwiecie się z niewoli.
 
-- Jedna sesja to jedna wyprawa. Do końca gry drużyna musi bezpiecznie wrócić do obozu.
-- Jeśli nie zdąży wrócić przed końcem sesji, postacie uciekają, a w następnej sesji zaczynają z Wytrzymałością zmniejszoną o wynik rzutu k6.
-- System: *Barbarzyńcy i Czarownice*. Zasady tłumaczymy 10 minut przed grą, więc nie trzeba nic czytać.
-- Przed sesją potwierdź w [liście postaci](postaci/), które postacie są gotowe.
+## jak gramy
+
+- 🗺️ 1 sesja = 1 wyprawa. Wasz oddział rusza na misję i na koniec gry MUSI bezpiecznie wrócić do obozu.
+- ⏳ Czas goni: Jeśli nie wrócicie do obozu przed końcem sesji, postacie salwują się ucieczką i następną sesję zaczną z Wytrzymałością pomniejszoną o k6.
+- 🎲 Mechanika: System BARBARZYŃCY I CZAROWNICY. Zasady wytłumaczę w 10 minut przed grą, nie musicie nic czytać!
 
 {% comment %} Poniżej automatyczny blok z ostatnim wpisem kroniki. Nie edytuj. {% endcomment %}
 {% assign sorted = site.sessions | sort: "date" | reverse %}
