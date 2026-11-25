@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Postaci
-permalink: /postaci/
 ---
 # Postaci
 

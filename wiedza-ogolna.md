@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Wiedza ogólna
-permalink: /wiedza-ogolna/
 ---
 # Wiedza ogólna
 

@@ -16,12 +16,12 @@
     <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <nav>
       <a class="back" href="{{ site.url }}/">← Kampanie</a>
-      <a href="{{ '/' | relative_url }}">Strona główna</a>
-      <a href="{{ '/postaci/' | relative_url }}">Postaci</a>
-      <a href="{{ '/wiedza-ogolna/' | relative_url }}">Wiedza ogólna</a>
-      <a href="{{ '/zasady/' | relative_url }}">Zasady</a>
-      <a href="{{ '/kronika/' | relative_url }}">Kronika</a>
-      <a href="{{ '/mapa/' | relative_url }}">Mapa</a>
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active" aria-current="page"{% endif %}>Strona główna</a>
+      <a href="{{ '/postaci.html' | relative_url }}"{% if page.url == '/postaci.html' %} class="active" aria-current="page"{% endif %}>Postaci</a>
+      <a href="{{ '/wiedza-ogolna.html' | relative_url }}"{% if page.url == '/wiedza-ogolna.html' %} class="active" aria-current="page"{% endif %}>Wiedza ogólna</a>
+      <a href="{{ '/zasady.html' | relative_url }}"{% if page.url == '/zasady.html' %} class="active" aria-current="page"{% endif %}>Zasady</a>
+      <a href="{{ '/kronika/' | relative_url }}"{% if page.url contains '/kronika' %} class="active" aria-current="page"{% endif %}>Kronika</a>
+      <a href="{{ '/mapa.html' | relative_url }}"{% if page.url == '/mapa.html' %} class="active" aria-current="page"{% endif %}>Mapa</a>
     </nav>
   </header>
   {% if page.hero %}
@@ -37,5 +37,26 @@
     {{ content }}
   </main>
   <footer class="site-footer">{{ site.title }}</footer>
+  <script>
+    // 1) Statusy w tabelach (WYKONANE, ZDOBYTE, ???) dostają znacznik do ostylowania.
+    // 2) Obraz w treści (np. mapa) otwiera się po dotknięciu w pełnym rozmiarze, gdzie można go powiększyć palcami.
+    (function () {
+      document.querySelectorAll('main td').forEach(function (td) {
+        var t = td.textContent.trim().toUpperCase();
+        if (t === 'WYKONANE' || t === 'ZDOBYTE' || t === 'ZDOBYTY' || t === 'GOTOWE') td.classList.add('done');
+        else if (t === '???') td.classList.add('unknown');
+      });
+      document.querySelectorAll('main img').forEach(function (img) {
+        if (img.closest('a') || img.closest('.cards') || img.closest('.session-list')) return;
+        var a = document.createElement('a');
+        a.href = img.currentSrc || img.src;
+        a.className = 'zoom';
+        a.target = '_blank';
+        a.rel = 'noopener';
+        img.parentNode.insertBefore(a, img);
+        a.appendChild(img);
+      });
+    })();
+  </script>
 </body>
 </html>
