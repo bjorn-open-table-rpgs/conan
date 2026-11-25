@@ -1,0 +1,11 @@
+title: "Bjorn Open Table RPGs"
+description: "Kampanie RPG w formule Open Table"
+lang: pl
+
+# Repozytorium organizacji o nazwie bjorn-open-table-rpgs.github.io
+# działa pod adresem https://bjorn-open-table-rpgs.github.io/
+baseurl: ""
+url: "https://bjorn-open-table-rpgs.github.io"
+
+exclude:
+  - README.md

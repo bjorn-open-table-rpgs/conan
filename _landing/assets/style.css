@@ -1,0 +1,103 @@
+/* Strona startowa: ciemny, minimalistyczny, czytelny na telefonie.
+   Kolory zmienisz w kilku zmiennych poniżej. */
+:root {
+  color-scheme: dark;
+  --bg: #0f1115;
+  --panel: #171a21;
+  --panel-hover: #1e222b;
+  --line: #262b36;
+  --text: #e8eaed;
+  --muted: #9aa1ad;
+  --accent: #7aa7ff;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 17px; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); }
+
+.site-header {
+  padding: 1.2rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+h1 {
+  font-size: 1.7rem;
+  line-height: 1.25;
+  margin: 0 0 .6rem;
+}
+main > p { color: var(--muted); margin: 0 0 1.8rem; }
+
+.session-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .75rem;
+}
+.session-list li { margin: 0; }
+.session-list a {
+  display: block;
+  padding: 1.1rem 1.2rem;
+  min-height: 3.5rem;            /* wygodny cel dotyku */
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--text);
+  text-decoration: none;
+  transition: background .15s, border-color .15s;
+}
+.session-list a:hover,
+.session-list a:focus-visible {
+  background: var(--panel-hover);
+  border-color: var(--accent);
+  outline: none;
+}
+.session-list strong { font-size: 1.1rem; }
+.session-list strong::after {
+  content: " →";
+  color: var(--accent);
+}
+.session-list .summary {
+  margin: .25rem 0 0;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.site-footer {
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: .8rem;
+  border-top: 1px solid var(--line);
+}
+
+@media (min-width: 40rem) {
+  html { font-size: 18px; }
+  main { padding-top: 3.5rem; }
+  h1 { font-size: 2rem; }
+}

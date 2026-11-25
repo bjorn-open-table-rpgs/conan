@@ -1,0 +1,33 @@
+---
+---
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="theme-color" content="#0f1115">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <span class="brand">{{ site.title }}</span>
+  </header>
+  <main>
+    <h1>Wybierz kampanię</h1>
+    <p>Tu znajdziesz strony moich kampanii w formule Open Table. Kliknij kampanię, żeby zobaczyć kronikę, postacie i zasady.</p>
+    <ul class="session-list">
+      {% for k in site.data.kampanie %}
+      <li>
+        <a href="{{ k.url | relative_url }}">
+          <strong>{{ k.title }}</strong>
+          <p class="summary">{{ k.description }}</p>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </main>
+  <footer class="site-footer">{{ site.title }}</footer>
+</body>
+</html>

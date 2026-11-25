@@ -1,0 +1,6 @@
+# Lista kampanii na stronie startowej.
+# Nowa kampania = nowe repozytorium w organizacji + trzy linie tutaj.
+# url: /nazwa-repozytorium/
+- title: Conan Open Table
+  url: /conan/
+  description: Kampania w świecie Conana. Gracze dołączają, kiedy mają czas.
