@@ -32,3 +32,9 @@ title: Wiedza ogólna
 | Rdza z kajdan z lochów Grodu                  |         |
 | Nasiona Czarnego Lotosu                       |         |
 
+| ŁUP                      | DZIAŁANIE                                                                                                                                                                                                                                                                                             |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pierścień Cierpienia     | Pochłania obrażenia z tytułu nieudanego rzutu obronnego na rzucenie czaru. Może zachować max 6 obrażeń. Czarownik posiadający pierścień może przez dotyk zadać wszystkie obrażenia zatrzymane w pierścieniu. Jeśli pierścień przyjmie więcej niż 6 obrażeń, Czarownika spotyka losowy, raniący efekt. |
+| Zbroja z łusek Megalanii | Redukuje otrzymane obrażenia o 4.                                                                                                                                                                                                                                                                     |
+| Młot Sulimy              | Zadaje 2k6 obrażeń, które można rozdzielić dowolnie między wszystkich przeciwników w zasięgu Młota.                                                                                                                                                                                                   |
+
